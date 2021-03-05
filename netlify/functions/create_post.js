@@ -26,7 +26,6 @@ exports.handler = async function(event) {
     imageUrl: postImageUrl,
     userId: userId,
     username: postUserName,
-    numberOfLikes: 0
   }
   // console.log(newPostObject)
   // Step 4:  Add the post to Firestore using the .add() function.
@@ -39,6 +38,7 @@ exports.handler = async function(event) {
   //          object as the body in the return value, using JSON.stringify()
   // console.log(docRef.id)
   newPostObject.postId = docRef.id
+  newPost.numberOfLikes = 0
   // console.log(newPostObject)
   return {
     statusCode: 200,
