@@ -25,7 +25,8 @@ exports.handler = async function(event) {
     created: firebase.firestore.FieldValue.serverTimestamp(),
     imageUrl: postImageUrl,
     userId: userId,
-    username: postUserName
+    username: postUserName,
+    numberOfLikes: 0
   }
   // console.log(newPostObject)
   // Step 4:  Add the post to Firestore using the .add() function.
@@ -38,8 +39,7 @@ exports.handler = async function(event) {
   //          object as the body in the return value, using JSON.stringify()
   // console.log(docRef.id)
   newPostObject.postId = docRef.id
-  newPostObject.numberOfLikes = 0
-  console.log(newPostObject)
+  // console.log(newPostObject)
   return {
     statusCode: 200,
     body: JSON.stringify(newPostObject)
