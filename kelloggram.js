@@ -98,7 +98,6 @@ async function renderPost(postId, username, imageUrl, likes) {
     let currentUserId = firebase.auth().currentUser.uid
 
     // 🔥🔥🔥 Code-Along
-    // Test comment for sync again
     // POST fetch() the /like API endpoint and test for success
     // Step 1:    Write a fetch() POST request to `/.netlify/functions/like`
     //            (we've already written the skeleton of the /like lambda function for you).
