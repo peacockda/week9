@@ -1,7 +1,7 @@
 // API url to this lambda funtion: /.netlify/functions/create_post
 let firebase = require('./firebase')
 
-exports.handler = async function(event) {
+exports.handler = async function (event) {
   let db = firebase.firestore()
   // console.log(event.body)
 
